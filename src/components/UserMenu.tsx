@@ -3,7 +3,7 @@
 import React from 'react';
 import { Menu, MenuButton, MenuList, MenuItem, Button, Text } from '@chakra-ui/react';
 import { ChevronDownIcon } from '@chakra-ui/icons';
-import { useAuthStore } from '../store/authStore';
+import { useAuthStore } from '@/store/authStore';
 import { useRouter } from 'next/navigation';
 
 export function UserMenu() {

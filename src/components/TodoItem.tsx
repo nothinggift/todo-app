@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { Box, IconButton, Input } from '@chakra-ui/react'
 import { DeleteIcon } from '@chakra-ui/icons'
-import { ClientTodo } from '../utils/api'
+import { ClientTodo } from '@/types'
 
 interface TodoItemProps {
   todo: ClientTodo

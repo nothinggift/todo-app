@@ -15,8 +15,9 @@ import {
   Link,
   FormErrorMessage,
 } from '@chakra-ui/react';
-import { useAuthStore } from '../store/authStore';
-import { useRegister, useLogin, ApiError } from '../utils/api';
+import { useAuthStore } from '@/store/authStore';
+import { useRegister, useLogin } from '@/hooks/useTodos';
+import { ApiError } from '@/types';
 
 export function RegisterForm() {
   const { setToken, setUser } = useAuthStore();

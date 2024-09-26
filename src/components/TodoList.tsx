@@ -1,10 +1,11 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { VStack, useToast,Box } from '@chakra-ui/react'
-import { useTodos, usePostTodo, useUpdateTodo, useDeleteTodo, ClientTodo, ApiError } from '../utils/api'
+import { VStack, useToast, Box } from '@chakra-ui/react'
+import { useTodos, usePostTodo, useUpdateTodo, useDeleteTodo } from '@/hooks/useTodos'
+import { ClientTodo, ApiError } from '@/types'
 import { TodoItem } from './TodoItem'
-import { useAuthStore } from '../store/authStore'
+import { useAuthStore } from '@/store/authStore'
 import { useRouter } from 'next/navigation'
 
 interface TodoListProps {
@@ -13,7 +14,6 @@ interface TodoListProps {
 }
 
 export function TodoList({ completed, renderAddTodo }: TodoListProps) {
-
   const { data: apiTodos, isError, error, refetch } = useTodos({
     enabled: !!useAuthStore.getState().token,
     params: {
@@ -139,7 +139,6 @@ export function TodoList({ completed, renderAddTodo }: TodoListProps) {
           ))
         )}
       </Box>
-      
     </VStack>
   )
 }

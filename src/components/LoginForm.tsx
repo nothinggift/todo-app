@@ -14,8 +14,9 @@ import {
   Link,
   FormErrorMessage,
 } from '@chakra-ui/react'
-import { useAuthStore } from '../store/authStore'
-import { useLogin, LoginResponse, ApiError } from '../utils/api'
+import { useAuthStore } from '@/store/authStore'
+import { useLogin } from '@/hooks/useTodos'
+import { LoginResponse, ApiError } from '@/types'
 
 export function LoginForm() {
   const { setToken, setUser } = useAuthStore()

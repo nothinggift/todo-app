@@ -1,8 +1,8 @@
 'use client'
 
-import { Box, Container, VStack, Heading } from '@chakra-ui/react'
-import { RegisterForm } from '../../components/RegisterForm'
-import { useAuthStore } from '../../store/authStore'
+import { Box, Container, VStack } from '@chakra-ui/react'
+import { RegisterForm } from '@/components/RegisterForm'
+import { useAuthStore } from '@/store/authStore'
 import { useRouter } from 'next/navigation'
 import { useEffect } from 'react'
 
